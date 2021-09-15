@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="resources/estilos/style.css">
+</head>
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="resources/img/system.svg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Who are you?</h2>
+                <form action="/register" method="POST">
+                    <div class="inputBx">
+                      <span>Name</span>
+                      <input type="text" name="name">
+                  </div>
+                    <div class="inputBx">
+                        <span>Username</span>
+                        <input type="text" name="user">
+                    </div>
+                    <div class="inputBx">
+                        <span>Password</span>
+                        <input type="password" name="pass">
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Register" name="">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+<!-- SweetAlert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<% if(typeof alert != "undefined") { %>
+    <script>
+        Swal.fire({
+            title: '<%= alertTitle %>',
+            text: '<%= alertMessage %>',
+            icon: '<%=  alertIcon %>',
+            showConfirmButton: <%= showConfirmButton %> ,
+            timer: <%= timer %>
+        }).then(()=>{
+            window.location='/'
+        })
+    </script>
+    <% } %>
+</body>
+</html>

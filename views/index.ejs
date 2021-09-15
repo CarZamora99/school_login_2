@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC English Club Admin</title>
+    <link rel="stylesheet" href="resources/estilos/dash_estilos.css">
+</head>
+<body>
+   
+
+    <h1>Pagina de Inicio</h1>
+    <% if(login) { %>
+        <h1>El usuario conectado es: <strong> <%= name %> </strong></h1>
+        <a href="logout" class="jj">Logout</a>
+    <% }else{ %>
+        <h1><strong> <%= name %> </strong></h1>
+        <a href="login" class="jj">Ir a Login</a>
+        <% } %>
+    
+</body>
+</html>
